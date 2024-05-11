@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+</head>
+<body>
+<h1 th:text="${greetings}"></h1>
+<div th:if="show">
+    <p>Contenido del parrafo</p>
+</div>
+<div class="series" th:if="${series!=null}">
+    <h3>Mis series favoritas</h3>
+    <ul th:each="serie:${series}">
+        <li th:text="${serie}"></li>
+    </ul>
+</div>
+</body>
+</html>

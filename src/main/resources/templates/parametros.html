@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Parametros</title>
+</head>
+<body>
+<h1>Parametros</h1>
+<div th:if="${valor}">
+
+        <li th:text=" ${valor}  "></li>
+    <li th:text="${edad}"></li>
+
+</div>
+
+
+<div th:if="${jugador!=null}">
+    <h3>Resultados de la busqueda del jugador</h3>
+<p style="color:red;"   th:text="${jugador.getNombre()}"></p>
+<p style="color:blue;" th:text="${jugador.getNumeroEquipo()}"></p>
+</div>
+</body>
+</html>
